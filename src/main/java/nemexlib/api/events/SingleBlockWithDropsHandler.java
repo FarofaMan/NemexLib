@@ -108,7 +108,7 @@ public abstract class SingleBlockWithDropsHandler extends WandEventHandler {
         if (!player.isSneaking()) return false; // Player needs to be sneaking
         // Code for editing world
         ItemStack item;
-        this.fireBlockParticles(world, x, y, z);
+        this.fireBlockParticles(world, x, y, z); // Particles needs to be before setBlockToAir at the moment or particles will be wrong
         world.setBlockToAir(x, y, z);
         // Checks if upgradable
         if (isUpgradable) {
